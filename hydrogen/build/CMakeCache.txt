@@ -243,6 +243,9 @@ OPENGL_glu_LIBRARY:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/
 //The directory containing a CMake configuration file for glfw3.
 glfw3_DIR:PATH=/opt/homebrew/lib/cmake/glfw3
 
+//The directory containing a CMake configuration file for glm.
+glm_DIR:PATH=/opt/homebrew/share/glm
+
 //Value Computed by CMake
 hydrogen_BINARY_DIR:STATIC=/Users/samyakjain/Desktop/GitHub/hydrogen-atom/hydrogen/build
 

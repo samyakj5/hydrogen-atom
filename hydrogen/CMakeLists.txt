@@ -7,6 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(OpenGL REQUIRED)
 find_package(glfw3 REQUIRED)
 find_package(GLEW REQUIRED)
+find_package(glm REQUIRED)
 
 add_executable(hydrogen src/main.cpp src/hydrogen.cpp)
 
@@ -14,4 +15,5 @@ target_link_libraries(hydrogen
     "-framework OpenGL"
     glfw
     GLEW::GLEW
+    glm::glm
 )

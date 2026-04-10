@@ -845,12 +845,14 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__xlocale.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_bounds.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_locale.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_mb_cur_max.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_static_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdlib.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_string.h \
@@ -879,6 +881,7 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/signal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/types.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/adjacent_find.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/all_of.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/any_of.h \
@@ -1419,8 +1422,10 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/atomic \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/bit \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/bitset \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cassert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cctype \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cerrno \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cfloat \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/climits \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/clocale \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cmath \
@@ -1439,6 +1444,7 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/deque \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/errno.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/exception \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/float.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/format \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/functional \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/initializer_list \
@@ -1482,6 +1488,7 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/errno.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/float.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libkern/_OSByteOrder.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libkern/arm/_OSByteOrder.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/limits.h \
@@ -1626,6 +1633,7 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_rsize_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_size_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_wchar_t.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/float.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/limits.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/ptrcheck.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdarg.h \
@@ -1633,12 +1641,543 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
   /Users/samyakjain/Desktop/GitHub/hydrogen-atom/hydrogen/src/hydrogen.h \
   /opt/homebrew/include/GL/glew.h \
-  /opt/homebrew/include/GLFW/glfw3.h
+  /opt/homebrew/include/GLFW/glfw3.h \
+  /opt/homebrew/include/glm/common.hpp \
+  /opt/homebrew/include/glm/common.hpp \
+  /opt/homebrew/include/glm/vector_relational.hpp \
+  /opt/homebrew/include/glm/detail/_vectorize.hpp \
+  /opt/homebrew/include/glm/detail/func_exponential.inl \
+  /opt/homebrew/include/glm/detail/func_vector_relational.inl \
+  /opt/homebrew/include/glm/detail/qualifier.hpp \
+  /opt/homebrew/include/glm/detail/setup.hpp \
+  /opt/homebrew/include/glm/detail/type_vec1.hpp \
+  /opt/homebrew/include/glm/detail/type_vec2.hpp \
+  /opt/homebrew/include/glm/detail/type_vec3.hpp \
+  /opt/homebrew/include/glm/detail/type_vec4.hpp \
+  /opt/homebrew/include/glm/exponential.hpp \
+  /opt/homebrew/include/glm/vector_relational.hpp \
+  /opt/homebrew/include/glm/detail/compute_vector_relational.hpp \
+  /opt/homebrew/include/glm/detail/_fixes.hpp \
+  /opt/homebrew/include/glm/detail/_vectorize.hpp \
+  /opt/homebrew/include/glm/detail/compute_common.hpp \
+  /opt/homebrew/include/glm/detail/func_common.inl \
+  /opt/homebrew/include/glm/detail/func_geometric.inl \
+  /opt/homebrew/include/glm/detail/qualifier.hpp \
+  /opt/homebrew/include/glm/detail/setup.hpp \
+  /opt/homebrew/include/glm/detail/type_vec1.hpp \
+  /opt/homebrew/include/glm/detail/type_vec1.inl \
+  /opt/homebrew/include/glm/detail/type_vec2.hpp \
+  /opt/homebrew/include/glm/detail/type_vec3.hpp \
+  /opt/homebrew/include/glm/detail/type_vec4.hpp \
+  /opt/homebrew/include/glm/geometric.hpp \
+  /opt/homebrew/include/glm/matrix.hpp \
+  /opt/homebrew/include/glm/detail/type_mat2x2.hpp \
+  /opt/homebrew/include/glm/detail/type_mat2x3.hpp \
+  /opt/homebrew/include/glm/detail/type_mat2x3.inl \
+  /opt/homebrew/include/glm/detail/type_mat2x4.hpp \
+  /opt/homebrew/include/glm/detail/type_mat2x4.inl \
+  /opt/homebrew/include/glm/detail/type_mat3x2.hpp \
+  /opt/homebrew/include/glm/detail/type_mat3x2.inl \
+  /opt/homebrew/include/glm/detail/type_mat3x3.hpp \
+  /opt/homebrew/include/glm/detail/type_mat3x3.inl \
+  /opt/homebrew/include/glm/detail/type_mat3x4.hpp \
+  /opt/homebrew/include/glm/detail/type_mat3x4.inl \
+  /opt/homebrew/include/glm/detail/type_mat4x2.hpp \
+  /opt/homebrew/include/glm/detail/type_mat4x2.inl \
+  /opt/homebrew/include/glm/detail/type_mat4x3.hpp \
+  /opt/homebrew/include/glm/detail/type_mat4x3.inl \
+  /opt/homebrew/include/glm/detail/type_mat4x4.hpp \
+  /opt/homebrew/include/glm/detail/type_mat4x4.inl \
+  /opt/homebrew/include/glm/detail/type_vec2.hpp \
+  /opt/homebrew/include/glm/detail/type_vec3.hpp \
+  /opt/homebrew/include/glm/detail/type_vec4.hpp \
+  /opt/homebrew/include/glm/ext/matrix_double2x3.hpp \
+  /opt/homebrew/include/glm/ext/matrix_double2x3_precision.hpp \
+  /opt/homebrew/include/glm/ext/matrix_double2x4.hpp \
+  /opt/homebrew/include/glm/ext/matrix_double2x4_precision.hpp \
+  /opt/homebrew/include/glm/ext/matrix_double3x2.hpp \
+  /opt/homebrew/include/glm/ext/matrix_double3x2_precision.hpp \
+  /opt/homebrew/include/glm/ext/matrix_double3x3.hpp \
+  /opt/homebrew/include/glm/ext/matrix_double3x3_precision.hpp \
+  /opt/homebrew/include/glm/ext/matrix_double3x4.hpp \
+  /opt/homebrew/include/glm/ext/matrix_double3x4_precision.hpp \
+  /opt/homebrew/include/glm/ext/matrix_double4x2.hpp \
+  /opt/homebrew/include/glm/ext/matrix_double4x2_precision.hpp \
+  /opt/homebrew/include/glm/ext/matrix_double4x3.hpp \
+  /opt/homebrew/include/glm/ext/matrix_double4x3_precision.hpp \
+  /opt/homebrew/include/glm/ext/matrix_double4x4.hpp \
+  /opt/homebrew/include/glm/ext/matrix_double4x4_precision.hpp \
+  /opt/homebrew/include/glm/ext/matrix_float2x3.hpp \
+  /opt/homebrew/include/glm/ext/matrix_float2x3_precision.hpp \
+  /opt/homebrew/include/glm/ext/matrix_float2x4.hpp \
+  /opt/homebrew/include/glm/ext/matrix_float2x4_precision.hpp \
+  /opt/homebrew/include/glm/ext/matrix_float3x2.hpp \
+  /opt/homebrew/include/glm/ext/matrix_float3x2_precision.hpp \
+  /opt/homebrew/include/glm/ext/matrix_float3x3.hpp \
+  /opt/homebrew/include/glm/ext/matrix_float3x3_precision.hpp \
+  /opt/homebrew/include/glm/ext/matrix_float3x4.hpp \
+  /opt/homebrew/include/glm/ext/matrix_float3x4_precision.hpp \
+  /opt/homebrew/include/glm/ext/matrix_float4x2.hpp \
+  /opt/homebrew/include/glm/ext/matrix_float4x2_precision.hpp \
+  /opt/homebrew/include/glm/ext/matrix_float4x3.hpp \
+  /opt/homebrew/include/glm/ext/matrix_float4x3_precision.hpp \
+  /opt/homebrew/include/glm/ext/matrix_float4x4.hpp \
+  /opt/homebrew/include/glm/ext/matrix_float4x4_precision.hpp \
+  /opt/homebrew/include/glm/geometric.hpp \
+  /opt/homebrew/include/glm/detail/func_matrix.inl \
+  /opt/homebrew/include/glm/detail/qualifier.hpp \
+  /opt/homebrew/include/glm/detail/setup.hpp \
+  /opt/homebrew/include/glm/mat2x2.hpp \
+  /opt/homebrew/include/glm/mat2x3.hpp \
+  /opt/homebrew/include/glm/mat2x4.hpp \
+  /opt/homebrew/include/glm/mat3x2.hpp \
+  /opt/homebrew/include/glm/mat3x3.hpp \
+  /opt/homebrew/include/glm/mat3x4.hpp \
+  /opt/homebrew/include/glm/mat4x2.hpp \
+  /opt/homebrew/include/glm/mat4x3.hpp \
+  /opt/homebrew/include/glm/mat4x4.hpp \
+  /opt/homebrew/include/glm/matrix.hpp \
+  /opt/homebrew/include/glm/vec2.hpp \
+  /opt/homebrew/include/glm/vec3.hpp \
+  /opt/homebrew/include/glm/vec4.hpp \
+  /opt/homebrew/include/glm/detail/compute_vector_relational.hpp \
+  /opt/homebrew/include/glm/detail/setup.hpp \
+  /opt/homebrew/include/glm/detail/_vectorize.hpp \
+  /opt/homebrew/include/glm/detail/compute_vector_decl.hpp \
+  /opt/homebrew/include/glm/detail/compute_vector_relational.hpp \
+  /opt/homebrew/include/glm/detail/qualifier.hpp \
+  /opt/homebrew/include/glm/detail/setup.hpp \
+  /opt/homebrew/include/glm/detail/type_mat2x2.hpp \
+  /opt/homebrew/include/glm/detail/type_mat2x2.inl \
+  /opt/homebrew/include/glm/detail/type_vec2.hpp \
+  /opt/homebrew/include/glm/detail/type_vec2.inl \
+  /opt/homebrew/include/glm/detail/type_vec3.hpp \
+  /opt/homebrew/include/glm/detail/type_vec3.inl \
+  /opt/homebrew/include/glm/detail/type_vec4.hpp \
+  /opt/homebrew/include/glm/detail/type_vec4.inl \
+  /opt/homebrew/include/glm/detail/setup.hpp \
+  /opt/homebrew/include/glm/ext/scalar_int_sized.hpp \
+  /opt/homebrew/include/glm/ext/scalar_uint_sized.hpp \
+  /opt/homebrew/include/glm/ext/vector_int2.hpp \
+  /opt/homebrew/include/glm/ext/vector_int3.hpp \
+  /opt/homebrew/include/glm/ext/vector_int4.hpp \
+  /opt/homebrew/include/glm/ext/vector_uint2.hpp \
+  /opt/homebrew/include/glm/ext/vector_uint3.hpp \
+  /opt/homebrew/include/glm/ext/vector_uint4.hpp \
+  /opt/homebrew/include/glm/ext/matrix_double2x2.hpp \
+  /opt/homebrew/include/glm/ext/matrix_double2x2_precision.hpp \
+  /opt/homebrew/include/glm/ext/matrix_float2x2.hpp \
+  /opt/homebrew/include/glm/ext/matrix_float2x2_precision.hpp \
+  /opt/homebrew/include/glm/ext/vector_bool2.hpp \
+  /opt/homebrew/include/glm/ext/vector_bool2_precision.hpp \
+  /opt/homebrew/include/glm/ext/vector_bool3.hpp \
+  /opt/homebrew/include/glm/ext/vector_bool3_precision.hpp \
+  /opt/homebrew/include/glm/ext/vector_bool4.hpp \
+  /opt/homebrew/include/glm/ext/vector_bool4_precision.hpp \
+  /opt/homebrew/include/glm/ext/vector_double2.hpp \
+  /opt/homebrew/include/glm/ext/vector_double2_precision.hpp \
+  /opt/homebrew/include/glm/ext/vector_double3.hpp \
+  /opt/homebrew/include/glm/ext/vector_double3_precision.hpp \
+  /opt/homebrew/include/glm/ext/vector_double4.hpp \
+  /opt/homebrew/include/glm/ext/vector_double4_precision.hpp \
+  /opt/homebrew/include/glm/ext/vector_float2.hpp \
+  /opt/homebrew/include/glm/ext/vector_float2_precision.hpp \
+  /opt/homebrew/include/glm/ext/vector_float3.hpp \
+  /opt/homebrew/include/glm/ext/vector_float3_precision.hpp \
+  /opt/homebrew/include/glm/ext/vector_float4.hpp \
+  /opt/homebrew/include/glm/ext/vector_float4_precision.hpp \
+  /opt/homebrew/include/glm/ext/vector_int2.hpp \
+  /opt/homebrew/include/glm/ext/vector_int2_sized.hpp \
+  /opt/homebrew/include/glm/ext/vector_int3.hpp \
+  /opt/homebrew/include/glm/ext/vector_int3_sized.hpp \
+  /opt/homebrew/include/glm/ext/vector_int4.hpp \
+  /opt/homebrew/include/glm/ext/vector_int4_sized.hpp \
+  /opt/homebrew/include/glm/ext/vector_uint2.hpp \
+  /opt/homebrew/include/glm/ext/vector_uint2_sized.hpp \
+  /opt/homebrew/include/glm/ext/vector_uint3.hpp \
+  /opt/homebrew/include/glm/ext/vector_uint3_sized.hpp \
+  /opt/homebrew/include/glm/ext/vector_uint4.hpp \
+  /opt/homebrew/include/glm/ext/vector_uint4_sized.hpp \
+  /opt/homebrew/include/glm/common.hpp \
+  /opt/homebrew/include/glm/common.hpp \
+  /opt/homebrew/include/glm/simd/platform.h \
+  /opt/homebrew/include/glm/detail/_fixes.hpp \
+  /opt/homebrew/include/glm/detail/_vectorize.hpp \
+  /opt/homebrew/include/glm/detail/func_integer.inl \
+  /opt/homebrew/include/glm/detail/func_packing.inl \
+  /opt/homebrew/include/glm/detail/func_trigonometric.inl \
+  /opt/homebrew/include/glm/detail/qualifier.hpp \
+  /opt/homebrew/include/glm/detail/setup.hpp \
+  /opt/homebrew/include/glm/detail/type_half.hpp \
+  /opt/homebrew/include/glm/detail/type_half.inl \
+  /opt/homebrew/include/glm/exponential.hpp \
+  /opt/homebrew/include/glm/fwd.hpp \
+  /opt/homebrew/include/glm/geometric.hpp \
+  /opt/homebrew/include/glm/glm.hpp \
+  /opt/homebrew/include/glm/ext/scalar_constants.hpp \
+  /opt/homebrew/include/glm/geometric.hpp \
+  /opt/homebrew/include/glm/detail/setup.hpp \
+  /opt/homebrew/include/glm/ext/scalar_constants.hpp \
+  /opt/homebrew/include/glm/ext/scalar_constants.inl \
+  /opt/homebrew/include/glm/gtc/constants.hpp \
+  /opt/homebrew/include/glm/gtc/constants.inl \
+  /opt/homebrew/include/glm/matrix.hpp \
+  /opt/homebrew/include/glm/trigonometric.hpp \
+  /opt/homebrew/include/glm/ext/matrix_clip_space.hpp \
+  /opt/homebrew/include/glm/ext/matrix_clip_space.inl \
+  /opt/homebrew/include/glm/ext/matrix_projection.hpp \
+  /opt/homebrew/include/glm/ext/matrix_projection.inl \
+  /opt/homebrew/include/glm/ext/matrix_transform.hpp \
+  /opt/homebrew/include/glm/ext/matrix_transform.inl \
+  /opt/homebrew/include/glm/geometric.hpp \
+  /opt/homebrew/include/glm/common.hpp \
+  /opt/homebrew/include/glm/detail/qualifier.hpp \
+  /opt/homebrew/include/glm/detail/setup.hpp \
+  /opt/homebrew/include/glm/detail/type_mat3x3.hpp \
+  /opt/homebrew/include/glm/detail/type_mat4x4.hpp \
+  /opt/homebrew/include/glm/detail/type_vec3.hpp \
+  /opt/homebrew/include/glm/detail/type_vec4.hpp \
+  /opt/homebrew/include/glm/exponential.hpp \
+  /opt/homebrew/include/glm/common.hpp \
+  /opt/homebrew/include/glm/detail/type_mat3x3.hpp \
+  /opt/homebrew/include/glm/detail/type_mat4x4.hpp \
+  /opt/homebrew/include/glm/detail/type_vec3.hpp \
+  /opt/homebrew/include/glm/detail/type_vec4.hpp \
+  /opt/homebrew/include/glm/exponential.hpp \
+  /opt/homebrew/include/glm/vector_relational.hpp \
+  /opt/homebrew/include/glm/ext/quaternion_common.hpp \
+  /opt/homebrew/include/glm/ext/quaternion_geometric.hpp \
+  /opt/homebrew/include/glm/ext/quaternion_relational.hpp \
+  /opt/homebrew/include/glm/ext/quaternion_relational.inl \
+  /opt/homebrew/include/glm/ext/vector_relational.hpp \
+  /opt/homebrew/include/glm/gtc/constants.hpp \
+  /opt/homebrew/include/glm/gtc/matrix_transform.hpp \
+  /opt/homebrew/include/glm/trigonometric.hpp \
+  /opt/homebrew/include/glm/detail/qualifier.hpp \
+  /opt/homebrew/include/glm/detail/setup.hpp \
+  /opt/homebrew/include/glm/detail/type_float.hpp \
+  /opt/homebrew/include/glm/detail/type_quat.hpp \
+  /opt/homebrew/include/glm/detail/type_quat.inl \
+  /opt/homebrew/include/glm/detail/type_vec1.hpp \
+  /opt/homebrew/include/glm/exponential.hpp \
+  /opt/homebrew/include/glm/exponential.hpp \
+  /opt/homebrew/include/glm/ext/vector_relational.hpp \
+  /opt/homebrew/include/glm/geometric.hpp \
+  /opt/homebrew/include/glm/ext/quaternion_geometric.hpp \
+  /opt/homebrew/include/glm/ext/quaternion_geometric.inl \
+  /opt/homebrew/include/glm/ext/scalar_constants.hpp \
+  /opt/homebrew/include/glm/ext/scalar_int_sized.hpp \
+  /opt/homebrew/include/glm/ext/scalar_uint_sized.hpp \
+  /opt/homebrew/include/glm/ext/vector_int1.hpp \
+  /opt/homebrew/include/glm/ext/vector_uint1.hpp \
+  /opt/homebrew/include/glm/geometric.hpp \
+  /opt/homebrew/include/glm/trigonometric.hpp \
+  /opt/homebrew/include/glm/vector_relational.hpp \
+  /opt/homebrew/include/glm/ext/quaternion_common.hpp \
+  /opt/homebrew/include/glm/ext/quaternion_common.inl \
+  /opt/homebrew/include/glm/ext/quaternion_double.hpp \
+  /opt/homebrew/include/glm/ext/quaternion_double_precision.hpp \
+  /opt/homebrew/include/glm/ext/quaternion_float.hpp \
+  /opt/homebrew/include/glm/ext/quaternion_float_precision.hpp \
+  /opt/homebrew/include/glm/ext/quaternion_geometric.hpp \
+  /opt/homebrew/include/glm/ext/quaternion_relational.hpp \
+  /opt/homebrew/include/glm/ext/quaternion_transform.hpp \
+  /opt/homebrew/include/glm/ext/quaternion_transform.inl \
+  /opt/homebrew/include/glm/ext/quaternion_trigonometric.hpp \
+  /opt/homebrew/include/glm/ext/quaternion_trigonometric.inl \
+  /opt/homebrew/include/glm/ext/scalar_constants.hpp \
+  /opt/homebrew/include/glm/ext/vector_bool1.hpp \
+  /opt/homebrew/include/glm/ext/vector_bool1_precision.hpp \
+  /opt/homebrew/include/glm/ext/vector_double1.hpp \
+  /opt/homebrew/include/glm/ext/vector_double1_precision.hpp \
+  /opt/homebrew/include/glm/ext/vector_float1.hpp \
+  /opt/homebrew/include/glm/ext/vector_float1_precision.hpp \
+  /opt/homebrew/include/glm/ext/vector_int1.hpp \
+  /opt/homebrew/include/glm/ext/vector_int1_sized.hpp \
+  /opt/homebrew/include/glm/ext/vector_relational.hpp \
+  /opt/homebrew/include/glm/ext/vector_relational.inl \
+  /opt/homebrew/include/glm/ext/vector_uint1.hpp \
+  /opt/homebrew/include/glm/ext/vector_uint1_sized.hpp \
+  /opt/homebrew/include/glm/geometric.hpp \
+  /opt/homebrew/include/glm/gtc/constants.hpp \
+  /opt/homebrew/include/glm/gtc/matrix_transform.hpp \
+  /opt/homebrew/include/glm/trigonometric.hpp \
+  /opt/homebrew/include/glm/vector_relational.hpp \
+  /opt/homebrew/include/glm/gtc/epsilon.hpp \
+  /opt/homebrew/include/glm/gtc/epsilon.inl \
+  /opt/homebrew/include/glm/gtc/quaternion.hpp \
+  /opt/homebrew/include/glm/gtc/quaternion.inl \
+  /opt/homebrew/include/glm/gtc/vec1.hpp \
+  /opt/homebrew/include/glm/mat2x2.hpp \
+  /opt/homebrew/include/glm/mat2x3.hpp \
+  /opt/homebrew/include/glm/mat2x4.hpp \
+  /opt/homebrew/include/glm/mat3x2.hpp \
+  /opt/homebrew/include/glm/mat3x3.hpp \
+  /opt/homebrew/include/glm/mat3x4.hpp \
+  /opt/homebrew/include/glm/mat4x2.hpp \
+  /opt/homebrew/include/glm/mat4x3.hpp \
+  /opt/homebrew/include/glm/mat4x4.hpp \
+  /opt/homebrew/include/glm/matrix.hpp \
+  /opt/homebrew/include/glm/trigonometric.hpp \
+  /opt/homebrew/include/glm/vec2.hpp \
+  /opt/homebrew/include/glm/vec3.hpp \
+  /opt/homebrew/include/glm/vec4.hpp \
+  /opt/homebrew/include/glm/gtc/matrix_transform.hpp \
+  /opt/homebrew/include/glm/gtc/matrix_transform.inl \
+  /opt/homebrew/include/glm/gtc/type_ptr.hpp \
+  /opt/homebrew/include/glm/gtc/type_ptr.inl \
+  /opt/homebrew/include/glm/integer.hpp \
+  /opt/homebrew/include/glm/mat2x2.hpp \
+  /opt/homebrew/include/glm/mat2x3.hpp \
+  /opt/homebrew/include/glm/mat2x4.hpp \
+  /opt/homebrew/include/glm/mat3x2.hpp \
+  /opt/homebrew/include/glm/mat3x3.hpp \
+  /opt/homebrew/include/glm/mat3x4.hpp \
+  /opt/homebrew/include/glm/mat4x2.hpp \
+  /opt/homebrew/include/glm/mat4x3.hpp \
+  /opt/homebrew/include/glm/mat4x4.hpp \
+  /opt/homebrew/include/glm/matrix.hpp \
+  /opt/homebrew/include/glm/packing.hpp \
+  /opt/homebrew/include/glm/trigonometric.hpp \
+  /opt/homebrew/include/glm/vec2.hpp \
+  /opt/homebrew/include/glm/vec3.hpp \
+  /opt/homebrew/include/glm/vec4.hpp \
+  /opt/homebrew/include/glm/vector_relational.hpp
 
+
+/opt/homebrew/include/glm/packing.hpp:
+
+/opt/homebrew/include/glm/gtc/type_ptr.inl:
+
+/opt/homebrew/include/glm/gtc/quaternion.inl:
+
+/opt/homebrew/include/glm/gtc/quaternion.hpp:
+
+/opt/homebrew/include/glm/gtc/epsilon.inl:
+
+/opt/homebrew/include/glm/gtc/epsilon.hpp:
+
+/opt/homebrew/include/glm/ext/vector_float1.hpp:
+
+/opt/homebrew/include/glm/ext/vector_double1_precision.hpp:
+
+/opt/homebrew/include/glm/ext/vector_double1.hpp:
+
+/opt/homebrew/include/glm/ext/vector_bool1.hpp:
+
+/opt/homebrew/include/glm/ext/quaternion_trigonometric.inl:
+
+/opt/homebrew/include/glm/ext/quaternion_trigonometric.hpp:
+
+/opt/homebrew/include/glm/ext/quaternion_transform.inl:
+
+/opt/homebrew/include/glm/ext/quaternion_float_precision.hpp:
+
+/opt/homebrew/include/glm/ext/quaternion_double_precision.hpp:
+
+/opt/homebrew/include/glm/ext/quaternion_double.hpp:
+
+/opt/homebrew/include/glm/ext/quaternion_common.inl:
+
+/opt/homebrew/include/glm/detail/type_quat.hpp:
+
+/opt/homebrew/include/glm/gtc/matrix_transform.hpp:
+
+/opt/homebrew/include/glm/ext/vector_relational.hpp:
+
+/opt/homebrew/include/glm/ext/quaternion_relational.inl:
+
+/opt/homebrew/include/glm/ext/quaternion_geometric.hpp:
+
+/opt/homebrew/include/glm/ext/quaternion_common.hpp:
+
+/opt/homebrew/include/glm/ext/matrix_transform.inl:
+
+/opt/homebrew/include/glm/ext/matrix_projection.inl:
+
+/opt/homebrew/include/glm/trigonometric.hpp:
+
+/opt/homebrew/include/glm/gtc/constants.inl:
+
+/opt/homebrew/include/glm/gtc/constants.hpp:
+
+/opt/homebrew/include/glm/glm.hpp:
+
+/opt/homebrew/include/glm/detail/type_half.inl:
+
+/opt/homebrew/include/glm/detail/type_half.hpp:
+
+/opt/homebrew/include/glm/detail/func_trigonometric.inl:
+
+/opt/homebrew/include/glm/simd/platform.h:
+
+/opt/homebrew/include/glm/ext/vector_uint2_sized.hpp:
+
+/opt/homebrew/include/glm/ext/vector_int4_sized.hpp:
+
+/opt/homebrew/include/glm/ext/vector_int3_sized.hpp:
+
+/opt/homebrew/include/glm/ext/vector_int2_sized.hpp:
+
+/opt/homebrew/include/glm/ext/vector_float4.hpp:
+
+/opt/homebrew/include/glm/ext/vector_float2_precision.hpp:
+
+/opt/homebrew/include/glm/ext/vector_double3.hpp:
+
+/opt/homebrew/include/glm/ext/vector_double3_precision.hpp:
+
+/opt/homebrew/include/glm/ext/vector_double2_precision.hpp:
+
+/opt/homebrew/include/glm/ext/vector_bool2_precision.hpp:
+
+/opt/homebrew/include/glm/ext/matrix_float2x2_precision.hpp:
+
+/opt/homebrew/include/glm/ext/vector_uint3.hpp:
+
+/opt/homebrew/include/glm/ext/vector_uint2.hpp:
+
+/opt/homebrew/include/glm/ext/vector_int3.hpp:
+
+/opt/homebrew/include/glm/ext/scalar_uint_sized.hpp:
+
+/opt/homebrew/include/glm/ext/scalar_int_sized.hpp:
+
+/opt/homebrew/include/glm/detail/type_vec3.inl:
+
+/opt/homebrew/include/glm/detail/type_vec2.inl:
+
+/opt/homebrew/include/glm/detail/type_mat2x2.inl:
+
+/opt/homebrew/include/glm/detail/compute_vector_decl.hpp:
+
+/opt/homebrew/include/glm/vec2.hpp:
+
+/opt/homebrew/include/glm/mat4x3.hpp:
+
+/opt/homebrew/include/glm/mat3x3.hpp:
+
+/opt/homebrew/include/glm/mat2x3.hpp:
+
+/opt/homebrew/include/glm/mat2x2.hpp:
+
+/opt/homebrew/include/glm/ext/quaternion_transform.hpp:
+
+/opt/homebrew/include/glm/detail/func_matrix.inl:
+
+/opt/homebrew/include/glm/ext/matrix_float4x4_precision.hpp:
+
+/opt/homebrew/include/glm/ext/vector_int1.hpp:
+
+/opt/homebrew/include/glm/ext/matrix_float4x3_precision.hpp:
+
+/opt/homebrew/include/glm/ext/matrix_float4x3.hpp:
+
+/opt/homebrew/include/glm/ext/matrix_float4x2_precision.hpp:
+
+/opt/homebrew/include/glm/ext/matrix_float4x2.hpp:
+
+/opt/homebrew/include/glm/ext/matrix_float3x4.hpp:
+
+/opt/homebrew/include/glm/ext/matrix_float3x3.hpp:
+
+/opt/homebrew/include/glm/ext/matrix_float3x2_precision.hpp:
+
+/opt/homebrew/include/glm/ext/matrix_float3x2.hpp:
+
+/opt/homebrew/include/glm/ext/matrix_float2x4_precision.hpp:
+
+/opt/homebrew/include/glm/ext/matrix_float2x3.hpp:
+
+/opt/homebrew/include/glm/ext/matrix_double4x4_precision.hpp:
+
+/opt/homebrew/include/glm/ext/matrix_double4x4.hpp:
+
+/opt/homebrew/include/glm/ext/matrix_double4x3.hpp:
+
+/opt/homebrew/include/glm/ext/matrix_double4x2_precision.hpp:
+
+/opt/homebrew/include/glm/ext/matrix_double4x2.hpp:
+
+/opt/homebrew/include/glm/ext/matrix_double3x4_precision.hpp:
+
+/opt/homebrew/include/glm/ext/matrix_double3x4.hpp:
+
+/opt/homebrew/include/glm/ext/matrix_double3x3_precision.hpp:
+
+/opt/homebrew/include/glm/ext/matrix_double3x2_precision.hpp:
+
+/opt/homebrew/include/glm/ext/matrix_double3x2.hpp:
+
+/opt/homebrew/include/glm/ext/matrix_double2x4_precision.hpp:
+
+/opt/homebrew/include/glm/mat4x2.hpp:
+
+/opt/homebrew/include/glm/ext/matrix_float4x4.hpp:
+
+/opt/homebrew/include/glm/detail/type_mat4x4.inl:
+
+/opt/homebrew/include/glm/detail/type_mat4x4.hpp:
+
+/opt/homebrew/include/glm/detail/type_mat4x3.inl:
+
+/opt/homebrew/include/glm/detail/type_mat4x2.inl:
+
+/opt/homebrew/include/glm/detail/type_mat3x4.hpp:
+
+/opt/homebrew/include/glm/detail/type_mat3x3.inl:
+
+/opt/homebrew/include/glm/detail/type_mat4x3.hpp:
+
+/opt/homebrew/include/glm/detail/type_mat3x3.hpp:
+
+/opt/homebrew/include/glm/detail/type_mat3x2.hpp:
+
+/opt/homebrew/include/glm/detail/type_mat2x4.inl:
+
+/opt/homebrew/include/glm/detail/type_mat2x4.hpp:
+
+/opt/homebrew/include/glm/detail/type_mat2x3.inl:
+
+/opt/homebrew/include/glm/detail/type_mat2x3.hpp:
+
+/opt/homebrew/include/glm/detail/type_vec4.inl:
+
+/opt/homebrew/include/glm/detail/type_mat2x2.hpp:
+
+/opt/homebrew/include/glm/detail/type_vec1.inl:
+
+/opt/homebrew/include/glm/detail/func_geometric.inl:
+
+/opt/homebrew/include/glm/exponential.hpp:
+
+/opt/homebrew/include/glm/detail/type_vec4.hpp:
+
+/opt/homebrew/include/glm/detail/type_vec3.hpp:
+
+/opt/homebrew/include/glm/detail/type_vec2.hpp:
+
+/opt/homebrew/include/glm/detail/setup.hpp:
+
+/opt/homebrew/include/glm/ext/vector_relational.inl:
+
+/opt/homebrew/include/glm/vec4.hpp:
+
+/opt/homebrew/include/glm/detail/func_vector_relational.inl:
+
+/opt/homebrew/include/glm/detail/func_exponential.inl:
+
+/opt/homebrew/include/glm/detail/_vectorize.hpp:
+
+/opt/homebrew/include/glm/vector_relational.hpp:
+
+/opt/homebrew/include/glm/common.hpp:
 
 /opt/homebrew/include/GLFW/glfw3.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/unistd.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/float.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/queue:
 
@@ -1652,21 +2191,33 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/deque:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cfloat:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cassert:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/bitset:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_char_like_type.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__ostream/basic_ostream.h:
 
+/opt/homebrew/include/glm/ext/matrix_float3x4_precision.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/queue.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/deque.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/assert.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework/Headers/gl.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework/Headers/OpenGLAvailability.h:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h:
+
+/opt/homebrew/include/glm/ext/matrix_double2x4.hpp:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdarg.h:
 
@@ -1676,11 +2227,15 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_wchar_t.h:
 
+/opt/homebrew/include/glm/mat2x4.hpp:
+
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_rsize_t.h:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_ptrdiff_t.h:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_offsetof.h:
+
+/opt/homebrew/include/glm/ext/matrix_double3x3.hpp:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_nullptr_t.h:
 
@@ -1699,6 +2254,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/xlocale/_stdio.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/xlocale/___wctype.h:
+
+/opt/homebrew/include/glm/detail/compute_vector_relational.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/xlocale.h:
 
@@ -1758,6 +2315,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_size_t.h:
 
+/opt/homebrew/include/glm/ext/matrix_float2x4.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_sigset_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_sigaltstack.h:
@@ -1776,13 +2335,19 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int8_t.h:
 
+/opt/homebrew/include/glm/detail/func_common.inl:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int32_t.h:
+
+/opt/homebrew/include/glm/detail/func_integer.inl:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ino64_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_id_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_gid_t.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/float.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fsfilcnt_t.h:
 
@@ -1816,11 +2381,15 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_blkcnt_t.h:
 
+/opt/homebrew/include/glm/ext/vector_double4_precision.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdlib.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ios:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stddef.h:
+
+/opt/homebrew/include/glm/detail/_fixes.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/math.h:
 
@@ -1880,6 +2449,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stdexcept:
 
+/opt/homebrew/include/glm/ext/quaternion_relational.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int32_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ratio:
@@ -1918,6 +2489,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstdio:
 
+/opt/homebrew/include/glm/detail/compute_common.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstdint:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/signal.h:
@@ -1943,6 +2516,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/in_out_result.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__variant/monostate.h:
+
+/opt/homebrew/include/glm/ext/matrix_double2x3.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/unreachable.h:
 
@@ -2074,6 +2649,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_pointer.h:
 
+/opt/homebrew/include/glm/ext/vector_bool4_precision.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/regular.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_pod.h:
@@ -2083,6 +2660,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_nothrow_destructible.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_nothrow_constructible.h:
+
+/opt/homebrew/include/glm/fwd.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_nothrow_assignable.h:
 
@@ -2109,6 +2688,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_final.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_execution_policy.h:
+
+/opt/homebrew/include/glm/ext/matrix_transform.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int.h:
 
@@ -2152,6 +2733,10 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_rwlockattr_t.h:
 
+/opt/homebrew/include/glm/ext/vector_uint4_sized.hpp:
+
+/opt/homebrew/include/glm/vec3.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/is_heap.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_wctype.h:
@@ -2161,6 +2746,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/integral_constant.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/extent.h:
+
+/opt/homebrew/include/glm/detail/type_mat3x2.inl:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/enable_if.h:
 
@@ -2192,6 +2779,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/conditional.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_static_assert.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/common_reference.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/alignment_of.h:
@@ -2208,6 +2797,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/aligned_storage.h:
 
+/opt/homebrew/include/glm/ext/vector_uint1.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/add_volatile.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/add_rvalue_reference.h:
@@ -2215,6 +2806,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/align.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/add_cv.h:
+
+/opt/homebrew/include/glm/ext/scalar_constants.inl:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/decay.h:
 
@@ -2228,7 +2821,13 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tuple/tuple_indices.h:
 
+/opt/homebrew/include/glm/ext/vector_int2.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/forward.h:
+
+/opt/homebrew/include/glm/detail/type_quat.inl:
+
+/opt/homebrew/include/glm/ext/matrix_clip_space.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tuple/tuple_element.h:
 
@@ -2267,6 +2866,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_empty.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__system_error/error_condition.h:
+
+/opt/homebrew/include/glm/ext/vector_int4.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__system_error/error_category.h:
 
@@ -2346,6 +2947,10 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/enable_view.h:
 
+/opt/homebrew/include/glm/ext/vector_bool4.hpp:
+
+/opt/homebrew/include/glm/detail/qualifier.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/inverse_trigonometric_functions.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/negative_binomial_distribution.h:
@@ -2371,6 +2976,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/type_list.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/exponential_distribution.h:
+
+/opt/homebrew/include/glm/ext/matrix_clip_space.inl:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/discrete_distribution.h:
 
@@ -2426,9 +3033,13 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/generate_n.h:
 
+/opt/homebrew/include/glm/ext/matrix_float2x2.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/set_intersection.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__mutex/tag_types.h:
+
+/opt/homebrew/include/glm/geometric.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/for_each_n.h:
 
@@ -2484,6 +3095,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_constructible.h:
 
+/opt/homebrew/include/glm/ext/matrix_double4x3_precision.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/equal.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__exception/exception_ptr.h:
@@ -2508,6 +3121,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uintmax_t.h:
 
+/opt/homebrew/include/glm/ext/vector_float2.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/error_functions.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/movable.h:
@@ -2517,6 +3132,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__atomic/atomic.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/rank.h:
+
+/opt/homebrew/include/glm/ext/vector_double2.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/insert_iterator.h:
 
@@ -2542,6 +3159,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/ranges_iterator_traits.h:
 
+/opt/homebrew/include/glm/ext/vector_uint4.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_in_port_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/move_sentinel.h:
@@ -2560,11 +3179,19 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/iterator_traits.h:
 
+/opt/homebrew/include/glm/ext/vector_bool3.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/result_of.h:
+
+/opt/homebrew/include/glm/mat4x4.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/istream_iterator.h:
 
+/opt/homebrew/include/glm/mat3x2.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_copy.h:
+
+/opt/homebrew/include/glm/ext/vector_float3.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/front_insert_iterator.h:
 
@@ -2594,7 +3221,11 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/temp_value.h:
 
+/opt/homebrew/include/glm/ext/vector_float3_precision.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/distance.h:
+
+/opt/homebrew/include/glm/ext/scalar_constants.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/invocable.h:
 
@@ -2650,6 +3281,10 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__atomic/cxx_atomic_impl.h:
 
+/opt/homebrew/include/glm/ext/quaternion_float.hpp:
+
+/opt/homebrew/include/glm/ext/matrix_double2x2.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/istream.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__atomic/atomic_lock_free.h:
@@ -2662,6 +3297,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/reverse_access.h:
 
+/opt/homebrew/include/glm/detail/type_float.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/totally_ordered.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/fstream.h:
@@ -2673,6 +3310,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/ranges_operations.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/runetype.h:
+
+/opt/homebrew/include/glm/ext/matrix_double2x3_precision.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_locale.h:
 
@@ -2698,15 +3337,21 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/subtract_with_carry_engine.h:
 
+/opt/homebrew/include/glm/ext/vector_float1_precision.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/incrementable_traits.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_primary_template.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__charconv/tables.h:
 
+/opt/homebrew/include/glm/ext/vector_float4_precision.hpp:
+
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stdarg_va_copy.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/find_end.h:
+
+/opt/homebrew/include/glm/integer.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/bind.h:
 
@@ -2716,6 +3361,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/pop_heap.h:
 
+/opt/homebrew/include/glm/ext/vector_uint1_sized.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/partition_point.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/formatter_output.h:
@@ -2723,6 +3370,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/formatter_integral.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/wrap_iter.h:
+
+/opt/homebrew/include/glm/ext/vector_bool3_precision.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/numeric:
 
@@ -2745,6 +3394,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/compiler.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__exception/operations.h:
+
+/opt/homebrew/include/glm/gtc/vec1.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/temporary_buffer.h:
 
@@ -2769,6 +3420,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__compare/compare_three_way.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__exception/exception.h:
+
+/opt/homebrew/include/glm/ext/matrix_double2x2_precision.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/language.h:
 
@@ -2812,6 +3465,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/shuffle.h:
 
+/opt/homebrew/include/glm/ext/vector_double4.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/different_from.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/stdio.h:
@@ -2823,6 +3478,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/extreme_value_distribution.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/derived_from.h:
+
+/opt/homebrew/include/glm/gtc/type_ptr.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_scalar.h:
 
@@ -2844,6 +3501,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/boolean_testable.h:
 
+/opt/homebrew/include/glm/detail/type_mat3x4.inl:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/binary_function.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_trivially_destructible.h:
@@ -2852,9 +3511,13 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_intmax_t.h:
 
+/opt/homebrew/include/glm/detail/func_packing.inl:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_posix_availability.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tuple/ignore.h:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/17/include/float.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/steady_clock.h:
 
@@ -2895,6 +3558,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__mbstate_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/includes.h:
+
+/opt/homebrew/include/glm/ext/matrix_projection.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__charconv/traits.h:
 
@@ -2940,6 +3605,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__locale:
 
+/opt/homebrew/include/glm/gtc/matrix_transform.inl:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cmath:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__assert:
@@ -2969,6 +3636,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/set_union.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/formatter_bool.h:
+
+/opt/homebrew/include/glm/ext/vector_bool2.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/swap_allocator.h:
 
@@ -3014,13 +3683,19 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__atomic/aliases.h:
 
+/opt/homebrew/include/glm/mat3x4.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/os/availability.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types.h:
 
+/opt/homebrew/include/glm/ext/quaternion_geometric.inl:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/find.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/ranges_iterator_concept.h:
+
+/opt/homebrew/include/glm/detail/type_vec1.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__debug_utils/sanitizers.h:
 
@@ -3066,6 +3741,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__cstddef/byte.h:
 
+/opt/homebrew/include/glm/ext/matrix_float3x3_precision.hpp:
+
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/string.h:
@@ -3090,7 +3767,11 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/pair.h:
 
+/opt/homebrew/include/glm/ext/vector_bool1_precision.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/copysign.h:
+
+/opt/homebrew/include/glm/ext/matrix_float2x3_precision.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/not_fn.h:
 
@@ -3194,6 +3875,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h:
 
+/opt/homebrew/include/glm/ext/vector_int1_sized.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/binary_search.h:
@@ -3292,6 +3975,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/limits.h:
 
+/opt/homebrew/include/glm/ext/vector_uint3_sized.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_wctrans_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/mersenne_twister_engine.h:
@@ -3310,6 +3995,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/lazy.h:
 
+/opt/homebrew/include/glm/detail/type_mat4x2.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__atomic/kill_dependency.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_errno_t.h:
@@ -3325,6 +4012,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/geometric_distribution.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/replace_if.h:
+
+/opt/homebrew/include/glm/matrix.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/streambuf.h:
 

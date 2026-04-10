@@ -1,5 +1,9 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+#include <glm/common.hpp>
 #include <iostream>
 #include "hydrogen.h"
 
@@ -9,9 +13,12 @@ const char* vertexShaderSource = R"(
     layout (location = 1) in float aDensity;
     out float density;
 
+    uniform mat4 projection;
+    uniform mat4 view;
+
     void main() {
-        gl_Position = vec4(aPos * 0.03, 1.0);
-        gl_PointSize = 10.0;
+        gl_Position = projection * view * vec4(aPos * 0.03, 1.0);
+        gl_PointSize = 3.0;
         density = aDensity;
     }
 )";
@@ -36,6 +43,39 @@ const char* fragmentShaderSource = R"(
         FragColor = vec4(color, alpha * 0.5);
     }
 )";
+
+// orbit camera
+
+float azimuth = 0.0f;
+float elevation = 0.3f;
+float radius = 3.0f;
+double lastX = 400;
+double lastY = 300;
+bool mouseDown = false;
+
+void mouseCallBack(GLFWwindow* window, int button, int action, int mods) {
+    if (button == GLFW_MOUSE_BUTTON_LEFT) {
+        mouseDown = (action == GLFW_PRESS);
+        glfwGetCursorPos(window, &lastX, &lastY);
+    }
+}
+
+void cursorCallBack(GLFWwindow* window, double x, double y) {
+    if (!mouseDown) {
+        return;
+    }
+    float dx = (x - lastX) * 0.005f;
+    float dy = (y - lastY) * 0.005f;
+    azimuth += dx;
+    elevation = glm::clamp(elevation - dy, -1.5f, 1.5f);
+    lastX = x;
+    lastY = y;
+}
+
+void scrollCallBack(GLFWwindow* window, double xoffset, double yoffset) {
+    radius = glm::clamp(radius - static_cast<float>(yoffset) * 0.2f, 0.5f, 10.0f);
+}
+
 
 int main() {
     if (!glfwInit()) {
@@ -64,8 +104,12 @@ int main() {
 
     std::cout << "OpenGL version: " << glGetString(GL_VERSION) << std::endl;
 
+    glfwSetMouseButtonCallback(window, mouseCallBack);
+    glfwSetCursorPosCallback(window, cursorCallBack);
+    glfwSetScrollCallback(window, scrollCallBack);
+
     std::vector<float> gpuData;
-    std::vector<Particle> particles = sampler(3, 1, 1);
+    std::vector<Particle> particles = sampler(3, 1, 1, 100000);
     gpuData.reserve(particles.size() * 4);
     for (const auto& p : particles) {
         gpuData.push_back(p.x);
@@ -138,10 +182,27 @@ int main() {
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE); // additive blending
 
+    glm::mat4 projection = glm::perspective(glm::radians(45.0f), 800.0f/600.0f, 0.1f, 1000.0f);
+    glm::mat4 view = glm::lookAt(glm::vec3(0.0f, 0.0f, 3.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+
+    glUseProgram(shaderProgram);
+
+    int projLoc = glGetUniformLocation(shaderProgram, "projection");
+    int viewLoc = glGetUniformLocation(shaderProgram, "view");
+
+    glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
+    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+
     while (!glfwWindowShouldClose(window)) {
         glClear(GL_COLOR_BUFFER_BIT);
 
+        glm::vec3 cameraPos = glm::vec3(radius * cos(elevation) * sin(azimuth), radius * sin(elevation), radius * cos(elevation) * cos(azimuth));
+
+        glm::mat4 view = glm::lookAt(cameraPos, glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+
         glUseProgram(shaderProgram);
+
+        glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
         glBindVertexArray(VAO);
         glDrawArrays(GL_POINTS, 0, particles.size());
 

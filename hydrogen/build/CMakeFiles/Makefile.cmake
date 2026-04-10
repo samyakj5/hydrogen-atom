@@ -60,6 +60,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake"
   "/opt/homebrew/share/cmake/Modules/Platform/UnixPaths.cmake"
   "/opt/homebrew/share/cmake/Modules/SelectLibraryConfigurations.cmake"
+  "/opt/homebrew/share/glm/glmConfig-release.cmake"
+  "/opt/homebrew/share/glm/glmConfig.cmake"
+  "/opt/homebrew/share/glm/glmConfigVersion.cmake"
   )
 
 # The corresponding makefile is:

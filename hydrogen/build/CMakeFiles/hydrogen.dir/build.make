@@ -113,6 +113,7 @@ hydrogen: CMakeFiles/hydrogen.dir/src/hydrogen.cpp.o
 hydrogen: CMakeFiles/hydrogen.dir/build.make
 hydrogen: /opt/homebrew/lib/libglfw.3.4.dylib
 hydrogen: /opt/homebrew/lib/libGLEW.2.3.1.dylib
+hydrogen: /opt/homebrew/lib/libglm.dylib
 hydrogen: CMakeFiles/hydrogen.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/samyakjain/Desktop/GitHub/hydrogen-atom/hydrogen/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable hydrogen"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hydrogen.dir/link.txt --verbose=$(VERBOSE)
