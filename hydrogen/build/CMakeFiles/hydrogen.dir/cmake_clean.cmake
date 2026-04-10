@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/hydrogen.dir/src/hydrogen.cpp.o"
+  "CMakeFiles/hydrogen.dir/src/hydrogen.cpp.o.d"
   "CMakeFiles/hydrogen.dir/src/main.cpp.o"
   "CMakeFiles/hydrogen.dir/src/main.cpp.o.d"
   "hydrogen"

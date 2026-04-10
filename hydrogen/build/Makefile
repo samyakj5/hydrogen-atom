@@ -129,6 +129,30 @@ hydrogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hydrogen.dir/build.make CMakeFiles/hydrogen.dir/build
 .PHONY : hydrogen/fast
 
+src/hydrogen.o: src/hydrogen.cpp.o
+.PHONY : src/hydrogen.o
+
+# target to build an object file
+src/hydrogen.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hydrogen.dir/build.make CMakeFiles/hydrogen.dir/src/hydrogen.cpp.o
+.PHONY : src/hydrogen.cpp.o
+
+src/hydrogen.i: src/hydrogen.cpp.i
+.PHONY : src/hydrogen.i
+
+# target to preprocess a source file
+src/hydrogen.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hydrogen.dir/build.make CMakeFiles/hydrogen.dir/src/hydrogen.cpp.i
+.PHONY : src/hydrogen.cpp.i
+
+src/hydrogen.s: src/hydrogen.cpp.s
+.PHONY : src/hydrogen.s
+
+# target to generate assembly for a file
+src/hydrogen.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hydrogen.dir/build.make CMakeFiles/hydrogen.dir/src/hydrogen.cpp.s
+.PHONY : src/hydrogen.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -162,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... hydrogen"
+	@echo "... src/hydrogen.o"
+	@echo "... src/hydrogen.i"
+	@echo "... src/hydrogen.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
