@@ -255,6 +255,9 @@ hydrogen_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 hydrogen_SOURCE_DIR:STATIC=/Users/samyakjain/Desktop/GitHub/hydrogen-atom/hydrogen
 
+//Dependencies for the target
+imgui_LIB_DEPENDS:STATIC=general;glfw;general;-framework OpenGL;
+
 
 ########################
 # INTERNAL cache entries

@@ -129,6 +129,163 @@ hydrogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hydrogen.dir/build.make CMakeFiles/hydrogen.dir/build
 .PHONY : hydrogen/fast
 
+#=============================================================================
+# Target rules for targets named imgui
+
+# Build rule for target.
+imgui: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imgui
+.PHONY : imgui
+
+# fast build rule for target.
+imgui/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/build
+.PHONY : imgui/fast
+
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_glfw.o: Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_glfw.cpp.o
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_glfw.o
+
+# target to build an object file
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_glfw.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_glfw.cpp.o
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_glfw.cpp.o
+
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_glfw.i: Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_glfw.cpp.i
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_glfw.i
+
+# target to preprocess a source file
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_glfw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_glfw.cpp.i
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_glfw.cpp.i
+
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_glfw.s: Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_glfw.cpp.s
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_glfw.s
+
+# target to generate assembly for a file
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_glfw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_glfw.cpp.s
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_glfw.cpp.s
+
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_opengl3.o: Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_opengl3.cpp.o
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_opengl3.o
+
+# target to build an object file
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_opengl3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_opengl3.cpp.o
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_opengl3.cpp.o
+
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_opengl3.i: Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_opengl3.cpp.i
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_opengl3.i
+
+# target to preprocess a source file
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_opengl3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_opengl3.cpp.i
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_opengl3.cpp.i
+
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_opengl3.s: Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_opengl3.cpp.s
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_opengl3.s
+
+# target to generate assembly for a file
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_opengl3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_opengl3.cpp.s
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_opengl3.cpp.s
+
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui.o: Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui.cpp.o
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui.o
+
+# target to build an object file
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui.cpp.o
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui.cpp.o
+
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui.i: Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui.cpp.i
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui.i
+
+# target to preprocess a source file
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui.cpp.i
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui.cpp.i
+
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui.s: Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui.cpp.s
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui.s
+
+# target to generate assembly for a file
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui.cpp.s
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui.cpp.s
+
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_draw.o: Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_draw.cpp.o
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_draw.o
+
+# target to build an object file
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_draw.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_draw.cpp.o
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_draw.cpp.o
+
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_draw.i: Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_draw.cpp.i
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_draw.i
+
+# target to preprocess a source file
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_draw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_draw.cpp.i
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_draw.cpp.i
+
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_draw.s: Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_draw.cpp.s
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_draw.s
+
+# target to generate assembly for a file
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_draw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_draw.cpp.s
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_draw.cpp.s
+
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_tables.o: Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_tables.cpp.o
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_tables.o
+
+# target to build an object file
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_tables.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_tables.cpp.o
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_tables.cpp.o
+
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_tables.i: Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_tables.cpp.i
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_tables.i
+
+# target to preprocess a source file
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_tables.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_tables.cpp.i
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_tables.cpp.i
+
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_tables.s: Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_tables.cpp.s
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_tables.s
+
+# target to generate assembly for a file
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_tables.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_tables.cpp.s
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_tables.cpp.s
+
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_widgets.o: Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_widgets.cpp.o
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_widgets.o
+
+# target to build an object file
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_widgets.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_widgets.cpp.o
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_widgets.cpp.o
+
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_widgets.i: Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_widgets.cpp.i
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_widgets.i
+
+# target to preprocess a source file
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_widgets.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_widgets.cpp.i
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_widgets.cpp.i
+
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_widgets.s: Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_widgets.cpp.s
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_widgets.s
+
+# target to generate assembly for a file
+Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_widgets.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_widgets.cpp.s
+.PHONY : Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_widgets.cpp.s
+
 src/hydrogen.o: src/hydrogen.cpp.o
 .PHONY : src/hydrogen.o
 
@@ -186,6 +343,25 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... hydrogen"
+	@echo "... imgui"
+	@echo "... Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_glfw.o"
+	@echo "... Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_glfw.i"
+	@echo "... Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_glfw.s"
+	@echo "... Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_opengl3.o"
+	@echo "... Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_opengl3.i"
+	@echo "... Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_opengl3.s"
+	@echo "... Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui.o"
+	@echo "... Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui.i"
+	@echo "... Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui.s"
+	@echo "... Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_draw.o"
+	@echo "... Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_draw.i"
+	@echo "... Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_draw.s"
+	@echo "... Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_tables.o"
+	@echo "... Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_tables.i"
+	@echo "... Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_tables.s"
+	@echo "... Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_widgets.o"
+	@echo "... Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_widgets.i"
+	@echo "... Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui_widgets.s"
 	@echo "... src/hydrogen.o"
 	@echo "... src/hydrogen.i"
 	@echo "... src/hydrogen.s"

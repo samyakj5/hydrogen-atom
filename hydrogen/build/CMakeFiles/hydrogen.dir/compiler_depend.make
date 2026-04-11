@@ -841,6 +841,7 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/TargetConditionals.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/___wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__xlocale.h \
@@ -1639,6 +1640,10 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdarg.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
+  /Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_glfw.h \
+  /Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_opengl3.h \
+  /Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imconfig.h \
+  /Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui.h \
   /Users/samyakjain/Desktop/GitHub/hydrogen-atom/hydrogen/src/hydrogen.h \
   /opt/homebrew/include/GL/glew.h \
   /opt/homebrew/include/GLFW/glfw3.h \
@@ -2175,6 +2180,10 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /opt/homebrew/include/GLFW/glfw3.h:
 
+/Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imgui.h:
+
+/Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_glfw.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/unistd.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/float.h:
@@ -2555,6 +2564,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/qos.h:
 
+/Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/imconfig.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/underlying_type.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__node_handle:
@@ -2818,6 +2829,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tuple/tuple_types.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tuple/tuple_like_no_subrange.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/TargetConditionals.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tuple/tuple_indices.h:
 
@@ -3408,6 +3421,8 @@ CMakeFiles/hydrogen.dir/src/main.cpp.o: /Users/samyakjain/Desktop/GitHub/hydroge
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/system_clock.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_seek_set.h:
+
+/Users/samyakjain/Desktop/GitHub/hydrogen-atom/third_party/imgui/backends/imgui_impl_opengl3.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/parser_std_format_spec.h:
 

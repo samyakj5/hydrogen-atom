@@ -11,9 +11,30 @@ find_package(glm REQUIRED)
 
 add_executable(hydrogen src/main.cpp src/hydrogen.cpp)
 
-target_link_libraries(hydrogen
-    "-framework OpenGL"
+
+add_library(imgui
+    ../third_party/imgui/imgui.cpp
+    ../third_party/imgui/imgui_draw.cpp
+    ../third_party/imgui/imgui_tables.cpp
+    ../third_party/imgui/imgui_widgets.cpp
+    ../third_party/imgui/backends/imgui_impl_glfw.cpp
+    ../third_party/imgui/backends/imgui_impl_opengl3.cpp
+)
+
+target_include_directories(imgui PUBLIC
+    ../third_party/imgui
+    ../third_party/imgui/backends
+)
+
+target_compile_definitions(imgui PRIVATE IMGUI_IMPL_OPENGL_LOADER_GLEW)
+
+target_link_libraries(imgui
     glfw
+    "-framework OpenGL"
+)
+
+target_link_libraries(hydrogen
+    imgui
     GLEW::GLEW
     glm::glm
 )
