@@ -21,7 +21,8 @@ const char* vertexShaderSource = R"(
 
     void main() {
         gl_Position = projection * view * vec4(aPos * 0.03, 1.0);
-        gl_PointSize = 3.0;
+        float visibleDensity = pow(clamp(aDensity, 0.0, 1.0), 0.35);
+        gl_PointSize = mix(4.5, 8.0, visibleDensity);
         density = aDensity;
     }
 )";
@@ -33,29 +34,30 @@ const char* fragmentShaderSource = R"(
 
     vec3 inferno(float t) {
         t = clamp(t, 0.0, 1.0);
+        const vec3 c0 = vec3(0.001462, 0.000466, 0.013866);
+        const vec3 c1 = vec3(0.106041, 0.047399, 0.298364);
+        const vec3 c2 = vec3(0.290763, 0.045644, 0.418637);
+        const vec3 c3 = vec3(0.573632, 0.135480, 0.377779);
+        const vec3 c4 = vec3(0.816144, 0.254082, 0.287140);
+        const vec3 c5 = vec3(0.961293, 0.488716, 0.084289);
+        const vec3 c6 = vec3(0.988362, 0.998364, 0.644924);
 
-        return vec3(
-            0.0002189403691192265 +
-            t * (0.1065134194856116 +
-            t * (0.3106657665093352 +
-            t * (0.3920117279989011 +
-            t * (0.1620609183311020 +
-            t * 0.0202393004715273)))),
-
-            0.0000059736830192100 +
-            t * (0.0163491696240763 +
-            t * (0.1381813238509890 +
-            t * (0.3204900174451070 +
-            t * (0.4022656962432290 +
-            t * 0.1225207355614600)))),
-
-            0.0000013433635390000 +
-            t * (0.0029864928571429 +
-            t * (0.0459973660714286 +
-            t * (0.2140415178571430 +
-            t * (0.4346892857142860 +
-            t * 0.3022044642857140))))
-        );
+        if (t < 0.16) {
+            return mix(c0, c1, smoothstep(0.0, 0.16, t));
+        }
+        if (t < 0.34) {
+            return mix(c1, c2, smoothstep(0.16, 0.34, t));
+        }
+        if (t < 0.56) {
+            return mix(c2, c3, smoothstep(0.34, 0.56, t));
+        }
+        if (t < 0.74) {
+            return mix(c3, c4, smoothstep(0.56, 0.74, t));
+        }
+        if (t < 0.9) {
+            return mix(c4, c5, smoothstep(0.74, 0.9, t));
+        }
+        return mix(c5, c6, smoothstep(0.9, 1.0, t));
     }
 
     void main() {
@@ -67,10 +69,11 @@ const char* fragmentShaderSource = R"(
         if (dist > 0.5) discard;
 
         // fading at edges
-        float alpha = 1.0 - smoothstep(0.3, 0.5, dist);
-        vec3 color = inferno(density);
+        float visibleDensity = 0.15 + 0.85 * pow(clamp(density, 0.0, 1.0), 0.35);
+        float alpha = (1.0 - smoothstep(0.22, 0.5, dist)) * (0.45 + 0.95 * visibleDensity);
+        vec3 color = inferno(visibleDensity) * (0.9 + 0.9 * visibleDensity);
 
-        FragColor = vec4(color, alpha * 1);
+        FragColor = vec4(color, alpha);
     }
 )";
 
@@ -78,10 +81,33 @@ const char* fragmentShaderSource = R"(
 
 float azimuth = 0.0f;
 float elevation = 0.3f;
-float radius = 3.0f;
+float radius = 2.2f;
 double lastX = 400;
 double lastY = 300;
 bool mouseDown = false;
+
+struct Viewport {
+    int x;
+    int y;
+    int width;
+    int height;
+};
+
+Viewport fixedAspectViewport(int framebufferWidth, int framebufferHeight, float targetAspect) {
+    float framebufferAspect = static_cast<float>(framebufferWidth) / static_cast<float>(framebufferHeight);
+
+    if (framebufferAspect > targetAspect) {
+        int height = framebufferHeight;
+        int width = static_cast<int>(height * targetAspect);
+        int x = (framebufferWidth - width) / 2;
+        return {x, 0, width, height};
+    }
+
+    int width = framebufferWidth;
+    int height = static_cast<int>(width / targetAspect);
+    int y = (framebufferHeight - height) / 2;
+    return {0, y, width, height};
+}
 
 void mouseCallBack(GLFWwindow* window, int button, int action, int mods) {
     ImGui_ImplGlfw_MouseButtonCallback(window, button, action, mods);
@@ -154,16 +180,12 @@ int main() {
     int n = 1;
     int l = 0;
     int m = 0;
+    const int previewSampleCount = 8000;
+    const int finalSampleCount = 100000;
+    int currentSampleCount = finalSampleCount;
 
     std::vector<float> gpuData;
-    std::vector<Particle> particles = sampler(n, l, m, 100000);
-    gpuData.reserve(particles.size() * 4);
-    for (const auto& p : particles) {
-        gpuData.push_back(p.x);
-        gpuData.push_back(p.y);
-        gpuData.push_back(p.z);
-        gpuData.push_back(p.density);
-    }
+    std::vector<Particle> particles;
     
     glEnable(GL_PROGRAM_POINT_SIZE);
     
@@ -176,7 +198,24 @@ int main() {
 
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
 
-    glBufferData(GL_ARRAY_BUFFER, gpuData.size() * sizeof(float), gpuData.data(), GL_STATIC_DRAW);
+    auto rebuildParticleBuffer = [&](int sampleCount) {
+        particles = sampler(n, l, m, sampleCount);
+        currentSampleCount = sampleCount;
+
+        gpuData.clear();
+        gpuData.reserve(particles.size() * 4);
+        for (const auto& p : particles) {
+            gpuData.push_back(p.x);
+            gpuData.push_back(p.y);
+            gpuData.push_back(p.z);
+            gpuData.push_back(p.density);
+        }
+
+        glBindBuffer(GL_ARRAY_BUFFER, VBO);
+        glBufferData(GL_ARRAY_BUFFER, gpuData.size() * sizeof(float), gpuData.data(), GL_STATIC_DRAW);
+    };
+
+    rebuildParticleBuffer(finalSampleCount);
 
     unsigned int vertexShader;
     vertexShader = glCreateShader(GL_VERTEX_SHADER);
@@ -227,21 +266,38 @@ int main() {
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
     glEnable(GL_BLEND);
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE); // additive blending
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-    glm::mat4 projection = glm::perspective(glm::radians(45.0f), 800.0f/600.0f, 0.1f, 1000.0f);
-    glm::mat4 view = glm::lookAt(glm::vec3(0.0f, 0.0f, 3.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+    const float simulationAspect = 4.0f / 3.0f;
+    glm::vec3 initialCameraPos = glm::vec3(
+        radius * cos(elevation) * sin(azimuth),
+        radius * sin(elevation),
+        radius * cos(elevation) * cos(azimuth)
+    );
+    glm::mat4 view = glm::lookAt(initialCameraPos, glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 
     glUseProgram(shaderProgram);
 
     int projLoc = glGetUniformLocation(shaderProgram, "projection");
     int viewLoc = glGetUniformLocation(shaderProgram, "view");
 
-    glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
     glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
 
     while (!glfwWindowShouldClose(window)) {
+        int framebufferWidth = 0;
+        int framebufferHeight = 0;
+        glfwGetFramebufferSize(window, &framebufferWidth, &framebufferHeight);
+
+        Viewport simulationViewport = fixedAspectViewport(framebufferWidth, framebufferHeight, simulationAspect);
+        glm::mat4 projection = glm::perspective(
+            glm::radians(45.0f),
+            simulationAspect,
+            0.1f,
+            1000.0f
+        );
+
         glClear(GL_COLOR_BUFFER_BIT);
+        glViewport(simulationViewport.x, simulationViewport.y, simulationViewport.width, simulationViewport.height);
 
         glm::vec3 cameraPos = glm::vec3(radius * cos(elevation) * sin(azimuth), radius * sin(elevation), radius * cos(elevation) * cos(azimuth));
         glm::mat4 view = glm::lookAt(cameraPos, glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
@@ -263,36 +319,33 @@ int main() {
         
         ImGui::Begin("Quantum Numbers");
 
-        bool changed = false;
+        bool previewRequested = false;
+        bool finalRequested = false;
 
-        changed |= ImGui::SliderInt("n", &n, 1, 6);
+        previewRequested |= ImGui::SliderInt("n", &n, 1, 6);
+        finalRequested |= ImGui::IsItemDeactivatedAfterEdit();
         if (l > n - 1) l = n - 1;
 
-        changed |= ImGui::SliderInt("l", &l, 0, n - 1);
+        previewRequested |= ImGui::SliderInt("l", &l, 0, n - 1);
+        finalRequested |= ImGui::IsItemDeactivatedAfterEdit();
         if (m < -l) m = -l;
         if (m > l) m = l;
 
-        changed |= ImGui::SliderInt("m", &m, -l, l);
+        previewRequested |= ImGui::SliderInt("m", &m, -l, l);
+        finalRequested |= ImGui::IsItemDeactivatedAfterEdit();
 
-        if (changed) {
-            particles = sampler(n, l, m, 100000);
-
-            gpuData.clear();
-            gpuData.reserve(particles.size() * 4);
-            for (const auto& p : particles) {
-                gpuData.push_back(p.x);
-                gpuData.push_back(p.y);
-                gpuData.push_back(p.z);
-                gpuData.push_back(p.density);
-            }
-
-            glBindBuffer(GL_ARRAY_BUFFER, VBO);
-            glBufferData(GL_ARRAY_BUFFER, gpuData.size() * sizeof(float), gpuData.data(), GL_STATIC_DRAW);
+        if (finalRequested) {
+            rebuildParticleBuffer(finalSampleCount);
+        } else if (previewRequested) {
+            rebuildParticleBuffer(previewSampleCount);
         }
+
+        ImGui::Text("Current samples: %d", currentSampleCount);
         
         ImGui::End();
         ImGui::Render();
 
+        glViewport(0, 0, framebufferWidth, framebufferHeight);
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
         glfwSwapBuffers(window);
