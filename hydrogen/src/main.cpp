@@ -177,12 +177,33 @@ int main() {
     glfwSetCursorPosCallback(window, cursorCallBack);
     glfwSetScrollCallback(window, scrollCallBack);
 
-    int n = 1;
-    int l = 0;
-    int m = 0;
+    OrbitalState orbital{1, 0, 0};
     const int previewSampleCount = 8000;
-    const int finalSampleCount = 100000;
+    const int finalSampleCount = 50000;
     int currentSampleCount = finalSampleCount;
+    const char* basisLabels[] = {"Complex", "Real"};
+    const char* realComponentLabels[] = {"Cosine", "Sine"};
+
+    auto normalizeOrbitalState = [&]() {
+        if (orbital.l > orbital.n - 1) {
+            orbital.l = orbital.n - 1;
+        }
+
+        if (orbital.basis == OrbitalBasis::Complex) {
+            if (orbital.m < -orbital.l) orbital.m = -orbital.l;
+            if (orbital.m > orbital.l) orbital.m = orbital.l;
+            orbital.component = RealComponent::None;
+            return;
+        }
+
+        if (orbital.m < 0) orbital.m = -orbital.m;
+        if (orbital.m > orbital.l) orbital.m = orbital.l;
+        if (orbital.m == 0) {
+            orbital.component = RealComponent::None;
+        } else if (orbital.component == RealComponent::None) {
+            orbital.component = RealComponent::Cosine;
+        }
+    };
 
     std::vector<float> gpuData;
     std::vector<Particle> particles;
@@ -199,7 +220,7 @@ int main() {
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
 
     auto rebuildParticleBuffer = [&](int sampleCount) {
-        particles = sampler(n, l, m, sampleCount);
+        particles = sampler(orbital, sampleCount);
         currentSampleCount = sampleCount;
 
         gpuData.clear();
@@ -322,17 +343,40 @@ int main() {
         bool previewRequested = false;
         bool finalRequested = false;
 
-        previewRequested |= ImGui::SliderInt("n", &n, 1, 6);
-        finalRequested |= ImGui::IsItemDeactivatedAfterEdit();
-        if (l > n - 1) l = n - 1;
+        int basisIndex = orbital.basis == OrbitalBasis::Complex ? 0 : 1;
+        if (ImGui::Combo("Basis", &basisIndex, basisLabels, IM_ARRAYSIZE(basisLabels))) {
+            orbital.basis = basisIndex == 0 ? OrbitalBasis::Complex : OrbitalBasis::Real;
+            normalizeOrbitalState();
+            previewRequested = true;
+            finalRequested = true;
+        }
 
-        previewRequested |= ImGui::SliderInt("l", &l, 0, n - 1);
+        previewRequested |= ImGui::SliderInt("n", &orbital.n, 1, 6);
         finalRequested |= ImGui::IsItemDeactivatedAfterEdit();
-        if (m < -l) m = -l;
-        if (m > l) m = l;
+        normalizeOrbitalState();
 
-        previewRequested |= ImGui::SliderInt("m", &m, -l, l);
+        previewRequested |= ImGui::SliderInt("l", &orbital.l, 0, orbital.n - 1);
         finalRequested |= ImGui::IsItemDeactivatedAfterEdit();
+        normalizeOrbitalState();
+
+        if (orbital.basis == OrbitalBasis::Complex) {
+            previewRequested |= ImGui::SliderInt("m", &orbital.m, -orbital.l, orbital.l);
+            finalRequested |= ImGui::IsItemDeactivatedAfterEdit();
+            normalizeOrbitalState();
+        } else {
+            previewRequested |= ImGui::SliderInt("|m|", &orbital.m, 0, orbital.l);
+            finalRequested |= ImGui::IsItemDeactivatedAfterEdit();
+            normalizeOrbitalState();
+
+            if (orbital.m > 0) {
+                int componentIndex = orbital.component == RealComponent::Sine ? 1 : 0;
+                if (ImGui::Combo("Component", &componentIndex, realComponentLabels, IM_ARRAYSIZE(realComponentLabels))) {
+                    orbital.component = componentIndex == 0 ? RealComponent::Cosine : RealComponent::Sine;
+                    previewRequested = true;
+                    finalRequested = true;
+                }
+            }
+        }
 
         if (finalRequested) {
             rebuildParticleBuffer(finalSampleCount);

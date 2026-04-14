@@ -1,9 +1,75 @@
 #include "hydrogen.h"
+#include <algorithm>
 #include <cmath>
-#include <vector>
+#include <complex>
 #include <random>
+#include <vector>
 
 const double a = 1.0; // bohr radius
+
+namespace {
+
+int magnetic_order(const OrbitalState& state) {
+    return std::abs(state.m);
+}
+
+double radial_part(const OrbitalState& state, double r) {
+    double rho = (2.0 * r) / (state.n * a);
+    double normalization = std::sqrt(
+        std::pow(2.0 / (state.n * a), 3) *
+        std::tgamma(state.n - state.l) / (2.0 * state.n * std::tgamma(state.n + state.l + 1))
+    );
+
+    double laguerre = assoc_laguerre(state.n - state.l - 1, 2 * state.l + 1, rho);
+    return normalization * std::exp(-rho / 2.0) * std::pow(rho, state.l) * laguerre;
+}
+
+std::complex<double> complex_harmonic(int l, int m, double theta, double phi) {
+    int abs_m = std::abs(m);
+    double angular = sph_legendre(l, abs_m, theta);
+    std::complex<double> positive_m = angular * std::polar(1.0, static_cast<double>(abs_m) * phi);
+    if (m < 0) {
+        double phase = (abs_m % 2 == 0) ? 1.0 : -1.0;
+        return phase * std::conj(positive_m);
+    }
+    return positive_m;
+}
+
+double real_harmonic(int l, int m, RealComponent component, double theta, double phi) {
+    double angular = sph_legendre(l, m, theta);
+    if (m == 0) {
+        return angular;
+    }
+
+    double azimuthal = 0.0;
+    if (component == RealComponent::Cosine) {
+        azimuthal = std::cos(static_cast<double>(m) * phi);
+    } else if (component == RealComponent::Sine) {
+        azimuthal = std::sin(static_cast<double>(m) * phi);
+    }
+    return std::sqrt(2.0) * angular * azimuthal;
+}
+
+}
+
+bool is_valid_orbital_state(const OrbitalState& state) {
+    if (state.n < 1) {
+        return false;
+    }
+    if (state.l < 0 || state.l >= state.n) {
+        return false;
+    }
+    if (state.basis == OrbitalBasis::Real) {
+        if (state.m < 0 || state.m > state.l) {
+            return false;
+        }
+        if (state.m == 0) {
+            return state.component == RealComponent::None;
+        }
+        return state.component == RealComponent::Cosine || state.component == RealComponent::Sine;
+    }
+    return magnetic_order(state) <= state.l;
+}
 
 double assoc_laguerre(int n, int m, double x) {
     if (n == 0) {
@@ -55,28 +121,20 @@ double sph_legendre(int l, int m, double theta) {
     return norm * assoc_legendre(l, m, theta);
 }
 
-double psi_squared(int n, int l, int m, double r, double theta, double phi) {
-    
-    // radial part
+double psi_squared(const OrbitalState& state, double r, double theta, double phi) {
+    if (!is_valid_orbital_state(state)) {
+        return 0.0;
+    }
 
-    double rho = (2.0 * r)/(n * a);
-    double normalization = std::sqrt(
-        std::pow(2.0/(n * a), 3) * 
-        std::tgamma(n - l)/(2.0 * n * std::tgamma(n + l + 1))
-    );
+    double radial = radial_part(state, r);
+    if (state.basis == OrbitalBasis::Complex) {
+        std::complex<double> angular = complex_harmonic(state.l, state.m, theta, phi);
+        return std::norm(radial * angular);
+    }
 
-    double L = assoc_laguerre(n - l - 1, 2 * l + 1, rho);
-    double R = normalization * std::exp(-rho/2) * std::pow(rho, l) * L;
-
-    // angular part
-
-    double Y = sph_legendre(l, std::abs(m), theta);
-
-    // psi
-
-    double psi = R * Y;
-
-    return std::pow(std::abs(psi), 2);
+    double angular = real_harmonic(state.l, state.m, state.component, theta, phi);
+    double psi = radial * angular;
+    return psi * psi;
 }
 
 void spherical_to_cartesian(double r, double theta, double phi, double& x, double& y, double& z) {
@@ -85,9 +143,13 @@ void spherical_to_cartesian(double r, double theta, double phi, double& x, doubl
     z = r * std::cos(theta);
 }
 
-std::vector<Particle> sampler(int n, int l, int m, int n_samples) {
-    double r_max = 4 * n * n * a;
+std::vector<Particle> sampler(const OrbitalState& state, int n_samples) {
     std::vector<Particle> samples;
+    if (!is_valid_orbital_state(state) || n_samples <= 0) {
+        return samples;
+    }
+
+    double r_max = 4 * state.n * state.n * a;
     samples.reserve(n_samples);
 
     // setup for random sampling
@@ -103,7 +165,7 @@ std::vector<Particle> sampler(int n, int l, int m, int n_samples) {
         double r     = r_max * std::cbrt(uniform(gen));
         double theta = std::acos(1.0 - 2.0 * uniform(gen));
         double phi   = 2.0 * M_PI * uniform(gen);
-        prob_max = std::max(prob_max, psi_squared(n, l, m, r, theta, phi));
+        prob_max = std::max(prob_max, psi_squared(state, r, theta, phi));
     }
     prob_max *= 1.1;
 
@@ -123,7 +185,7 @@ std::vector<Particle> sampler(int n, int l, int m, int n_samples) {
 
         // calculate probability
 
-        double prob = psi_squared(n, l, m, r, theta, phi);
+        double prob = psi_squared(state, r, theta, phi);
 
         // rejection sampling
 
